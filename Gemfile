@@ -1,8 +1,7 @@
-source :rubygems
+source 'https://rubygems.org'
 
-puppetversion = ENV['PUPPET_VERSION']
-gem 'puppet', puppetversion, :require => false
-gem 'puppet-lint'
-gem 'rspec-puppet'
-gem 'puppetlabs_spec_helper', '>= 0.4.0'
-
+gem 'puppet', '~> 4.2.0'
+gem 'puppet-lint', :git => 'https://github.com/rodjek/puppet-lint'
+gem 'puppet-blacksmith', '~> 3.3.1'
+gem 'puppetlabs_spec_helper', '~> 0.10.3'
+gem 'metadata-json-lint', '~> 0.0.11'

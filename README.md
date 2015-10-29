@@ -1,6 +1,17 @@
-# puppet-sysctl
+sysctl
+==============
 
-## Overview
+[![Puppet Forge](https://img.shields.io/puppetforge/v/halyard/sysctl.svg)](https://forge.puppetlabs.com/halyard/sysctl)
+[![Build Status](https://img.shields.io/circleci/project/halyard/puppet-sysctl.svg)](https://circleci.com/gh/halyard/puppet-sysctl)
+
+Configure sysctl settings
+
+## Changes from upstream
+
+* Switch to CircleCI
+* Adjust metadata for my environment
+
+## Usage
 
 Manage sysctl variable values. All changes are immediately applied, as well as
 configured to become persistent. Tested on Red Hat Enterprise Linux 6.
@@ -23,7 +34,7 @@ For the few original settings in the main `/etc/sysctl.conf` file, the value is
 also replaced so that running `sysctl -p` doesn't revert any change made by
 puppet.
 
-## Examples
+### Examples
 
 Enable IP forwarding globally :
 ```puppet
@@ -56,7 +67,7 @@ To enable purging of settings, you can use hiera to set the `sysctl::base`
 sysctl::base::purge: true
 ```
  
-## Hiera
+### Hiera
 
 It is also possible to manage all sysctl keys using hiera, through the
 `$values` parameter of the `sysctl::base` class. If sysctl values are spread
@@ -74,7 +85,7 @@ sysctl::base::values:
     ensure: absent
 ```
 
-## Original /etc/sysctl.d entries
+### Original /etc/sysctl.d entries
 
 When purging, puppet might want to remove files from `/etc/sysctl.d/` which
 have not been created by puppet, but need to be present. It's possible to
@@ -90,4 +101,8 @@ sysctl { 'libvirtd':
   source => "puppet:///modules/${module_name}/libvirtd.sysctl",
 }
 ```
+
+## License
+
+puppet-sysctl is released under the Apache 2.0 License. See the bundled LICENSE file for details.
 
