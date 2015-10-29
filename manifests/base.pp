@@ -7,7 +7,7 @@ class sysctl::base (
   $values             = undef,
   $sysctl_dir_path    = '/etc/sysctl.d',
   $sysctl_dir_owner   = 'root',
-  $sysctl_dir_group   = 'root',
+  $sysctl_dir_group   = 'wheel',
   $sysctl_dir_mode    = '0755'
 ) {
 
