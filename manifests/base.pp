@@ -5,7 +5,6 @@
 class sysctl::base (
   $purge              = false,
   $values             = undef,
-  $sysctl_dir         = false,
   $sysctl_dir_path    = '/etc/sysctl.d',
   $sysctl_dir_owner   = 'root',
   $sysctl_dir_group   = 'root',
@@ -16,20 +15,19 @@ class sysctl::base (
     create_resources(sysctl, $values)
   }
 
-  if $sysctl_dir {
-    if $purge {
-      $recurse = true
-    } else {
-      $recurse = false
-    }
-    file { $sysctl_dir_path:
-      ensure  => directory,
-      owner   => $sysctl_dir_owner,
-      group   => $sysctl_dir_group,
-      mode    => $sysctl_dir_mode,
-      # Magic hidden here
-      purge   => $purge,
-      recurse => $recurse,
-    }
+  if $purge {
+    $recurse = true
+  } else {
+    $recurse = false
   }
+  file { $sysctl_dir_path:
+    ensure  => directory,
+    owner   => $sysctl_dir_owner,
+    group   => $sysctl_dir_group,
+    mode    => $sysctl_dir_mode,
+    # Magic hidden here
+    purge   => $purge,
+    recurse => $recurse,
+  }
+}
 }
