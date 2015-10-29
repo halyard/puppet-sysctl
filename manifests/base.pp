@@ -30,4 +30,3 @@ class sysctl::base (
     recurse => $recurse,
   }
 }
-}
