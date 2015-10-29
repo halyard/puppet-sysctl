@@ -54,7 +54,7 @@ define sysctl (
     file { "/etc/sysctl.d/${sysctl_d_file}":
       ensure  => $ensure,
       owner   => 'root',
-      group   => 'root',
+      group   => 'wheel',
       mode    => '0644',
       content => $file_content,
       source  => $file_source,
