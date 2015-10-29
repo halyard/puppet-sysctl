@@ -1,6 +1,6 @@
 {
   "name": "halyard-sysctl",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Mathalyard Saou",
   "license": "Apache-2.0",
   "summary": "Sysctl module",
