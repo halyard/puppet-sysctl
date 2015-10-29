@@ -1,13 +1,16 @@
 {
   "name": "halyard-sysctl",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Mathalyard Saou",
   "license": "Apache-2.0",
   "summary": "Sysctl module",
   "source": "git://github.com/halyard/puppet-sysctl.git",
   "project_page": "https://github.com/halyard/puppet-sysctl",
   "issues_url": "https://github.com/halyard/puppet-sysctl/issues",
-  "tags": ["sysctl", "os"],
+  "tags": [
+    "sysctl",
+    "os"
+  ],
   "operatingsystem_support": [
     {
       "operatingsystem": "Darwin",
@@ -18,5 +21,7 @@
     }
   ],
   "description": "Manage sysctl variable values.",
-  "dependencies": []
+  "dependencies": [
+
+  ]
 }
