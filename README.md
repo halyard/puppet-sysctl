@@ -2,6 +2,8 @@ sysctl
 ==============
 
 [![Puppet Forge](https://img.shields.io/puppetforge/v/halyard/sysctl.svg)](https://forge.puppetlabs.com/halyard/sysctl)
+[![Dependency Status](https://img.shields.io/gemnasium/halyard/puppet-sysctl.svg)](https://gemnasium.com/halyard/puppet-sysctl)
+[![Apache Licensed](http://img.shields.io/badge/license-Apache-green.svg)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0))
 [![Build Status](https://img.shields.io/circleci/project/halyard/puppet-sysctl.svg)](https://circleci.com/gh/halyard/puppet-sysctl)
 
 Configure sysctl settings
