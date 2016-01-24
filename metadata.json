@@ -1,9 +1,9 @@
 {
   "name": "halyard-sysctl",
-  "version": "1.0.7",
-  "author": "Mathalyard Saou",
-  "license": "Apache-2.0",
-  "summary": "Sysctl module",
+  "version": "2.0.0",
+  "author": "Les Aker",
+  "license": "MIT",
+  "summary": "Set sysctl values on Mac with Puppet",
   "source": "git://github.com/halyard/puppet-sysctl.git",
   "project_page": "https://github.com/halyard/puppet-sysctl",
   "issues_url": "https://github.com/halyard/puppet-sysctl/issues",
@@ -20,7 +20,6 @@
       ]
     }
   ],
-  "description": "Manage sysctl variable values.",
   "dependencies": [
 
   ]
