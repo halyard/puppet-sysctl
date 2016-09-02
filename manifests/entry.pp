@@ -18,8 +18,8 @@ define sysctl::entry(
 
   if $ensure == 'present' {
     exec { "Live-update sysctl::value::${name} to ${value}":
-      command => "sysctl '${name}=${value}'",
-      unless  => "sysctl -n '${name}' | grep '^${value}$'",
+      command => "/usr/sbin/sysctl '${name}=${value}'",
+      unless  => "/usr/sbin/sysctl -n '${name}' | grep '^${value}$'",
       user    => 'root'
     }
   }
