@@ -3,7 +3,7 @@ puppet-sysctl
 
 [![Puppet Forge](https://img.shields.io/puppetforge/v/halyard/sysctl.svg)](https://forge.puppetlabs.com/halyard/sysctl)
 [![MIT Licensed](http://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
-[![Build Status](https://img.shields.io/circleci/project/halyard/puppet-sysctl/master.svg)](https://circleci.com/gh/halyard/puppet-sysctl)
+[![Build Status](https://img.shields.io/travis/com/halyard/puppet-sysctl.svg)](https://travis-ci.com/halyard/puppet-sysctl)
 
 Configure sysctl settings on Mac (which does not support /etc/sysctl.d)
 
