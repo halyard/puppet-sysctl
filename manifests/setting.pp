@@ -1,15 +1,15 @@
 # @summary Create a sysctl setting
 #
-# @param key sets the sysctl setting name
 # @param value sets the desired value
+# @param key sets the sysctl setting name
 define sysctl::setting (
-  String $value
-  String $name = $title,
+  String $value,
+  String $key = $title,
 ) {
   include sysctl
 
-  file { "/etc/sysctl.d/${name}":
+  file { "/etc/sysctl.d/${key}":
     ensure  => file,
-    content => "${name}=${value}",
+    content => "${key}=${value}",
   }
 }
