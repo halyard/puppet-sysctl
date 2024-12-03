@@ -6,6 +6,8 @@ class sysctl () {
     owner  => 'root',
     group  => 'root',
     mode   => '0755',
+    recurse   => true,
+    purge     => true,
   }
 
   Sysctl::Setting <| |>

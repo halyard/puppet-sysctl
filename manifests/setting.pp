@@ -8,7 +8,7 @@ define sysctl::setting (
 ) {
   include sysctl
 
-  file { "/etc/sysctl.d/${key}":
+  file { "/etc/sysctl.d/${key}.conf":
     ensure  => file,
     content => "${key}=${value}",
   }
